@@ -37,6 +37,7 @@ echo $HOME/.gitconfig << EOF
 EOF
 
 ## OTHER TOOLS
+brew install python
 brew install direnv
 echo 'eval "$(direnv hook bash)"' >> $HOME/.bashrc
 brew install csshx
