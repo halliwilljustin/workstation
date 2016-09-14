@@ -20,19 +20,12 @@ brew upgrade
 ## BASH
 # update Preferences to include `Command: /usr/local/bin/bash --login`
 brew install bash
-
-## OTHER TOOLS
-brew install direnv
-echo 'eval "$(direnv hook bash)"' >> $HOME/.bashrc
-
-brew install ag
-brew install tree
-brew install z
-echo '. `brew --prefix`/etc/profile.d/z.sh' >> ~/.bashrc
-#begin untested
 echo $HOME/.bashrc << EOF
   export EDITOR=vim
 EOF
+
+## GIT
+brew instal git
 echo $HOME/.gitconfig << EOF
   [user]
     email = corbin.halliwill@gmail.com
@@ -42,6 +35,15 @@ echo $HOME/.gitconfig << EOF
     co = checkout
     ci = commit
 EOF
+
+## OTHER TOOLS
+brew install direnv
+echo 'eval "$(direnv hook bash)"' >> $HOME/.bashrc
+brew install csshx
+brew install ag
+brew install tree
+brew install z
+echo '. `brew --prefix`/etc/profile.d/z.sh' >> ~/.bashrc
 
 ## BASHIT (install and move autocomplete files)
 git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
