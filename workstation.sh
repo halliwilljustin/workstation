@@ -10,6 +10,8 @@
 #   - chrome
 #   - firefox
 #   - flycut
+#   - soundflower
+#   - LineIn
 #   - ...
 
 ## INSTALL BREW
