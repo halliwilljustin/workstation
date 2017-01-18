@@ -12,6 +12,7 @@
 #   - flycut
 #   - soundflower
 #   - LineIn
+#   - htop
 #   - ...
 
 ## INSTALL BREW
