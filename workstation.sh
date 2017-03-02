@@ -14,6 +14,7 @@
 #   - LineIn
 #   - htop
 #   - ...
+set -e
 
 ## INSTALL BREW
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -53,11 +54,13 @@ echo '. `brew --prefix`/etc/profile.d/z.sh' >> ~/.bashrc
 git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
 yes | $HOME/.bash_it/install.sh
 echo $HOME/.bash_profile << EOF
-# Source .bashrc
+# Source .bashrc and .bash_profile
 if [ -f $HOME/.bashrc ]; then
-  . $HOME/.bashrc
+  source $HOME/.bashrc
 fi
-EOF
+if [ -f $HOME/.bash_profile ]; then
+  source $HOME/.bash_profile
+fi
 bash-it enable completion git brew
 
 ## VIM
