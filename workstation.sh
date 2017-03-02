@@ -53,14 +53,14 @@ echo '. `brew --prefix`/etc/profile.d/z.sh' >> ~/.bashrc
 ## BASHIT (install and move autocomplete files)
 git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
 yes | $HOME/.bash_it/install.sh
+
 echo $HOME/.bash_profile << EOF
 # Source .bashrc and .bash_profile
 if [ -f $HOME/.bashrc ]; then
   source $HOME/.bashrc
 fi
-if [ -f $HOME/.bash_profile ]; then
-  source $HOME/.bash_profile
-fi
+EOF
+
 bash-it enable completion git brew
 
 ## VIM
