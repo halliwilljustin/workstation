@@ -69,10 +69,9 @@ brew uninstall ctags
 brew tap universal-ctags/universal-ctags
 brew instal universal-ctags --HEAD
 brew install python3
-pip3 install neovim
-brew install neovim/neovim/neovim
-ln -s /usr/local/bin/nvim /usr/local/bin/vim
+brew install vim --with-lua --with-python3
 curl vimfiles.luan.sh/install | FORCE=1 bash
+vim-update
 vim-update
 
 ## GO
