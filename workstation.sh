@@ -6,13 +6,9 @@
 # TODO check for errors and print error messages
 # TODO look into installing the following
 #   - shiftit
-#   - iterm
-#   - chrome
-#   - firefox
 #   - flycut
 #   - soundflower
 #   - LineIn
-#   - htop
 #   - ...
 set -e
 
@@ -20,6 +16,10 @@ set -e
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew upgrade
+
+## Cask
+brew upgrade brew-cask
+brew cask install iterm2 google-chrome firefox
 
 ## BASH
 # update Preferences to include `Command: /usr/local/bin/bash --login`
@@ -47,6 +47,7 @@ echo 'eval "$(direnv hook bash)"' >> $HOME/.bashrc
 brew install csshx
 brew install ag
 brew install tree
+brew install htop
 brew install z
 echo '. `brew --prefix`/etc/profile.d/z.sh' >> ~/.bashrc
 
@@ -84,3 +85,5 @@ pushd $HOME/go
   GOPATH=$HOME/go go get -u github.com/FiloSottile/gvt
 popd
 
+## Cleanup
+brew cleanup && brew cask cleanup
