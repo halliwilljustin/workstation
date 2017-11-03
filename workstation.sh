@@ -64,16 +64,6 @@ EOF
 
 bash-it enable completion git brew
 
-## VIM
-brew uninstall ctags
-brew tap universal-ctags/universal-ctags
-brew instal universal-ctags --HEAD
-brew install python3
-brew install vim --with-lua --with-python3
-curl vimfiles.luan.sh/install | FORCE=1 bash
-vim-update
-vim-update
-
 ## GO
 brew install go
 mkdir -p $HOME/go/bin $HOME/go/src $HOME/go/pkg
@@ -83,6 +73,16 @@ pushd $HOME/go
   GOPATH=$HOME/go go get -u github.com/onsi/ginkgo/ginkgo
   GOPATH=$HOME/go go get -u github.com/FiloSottile/gvt
 popd
+
+## VIM
+brew uninstall ctags
+brew tap universal-ctags/universal-ctags
+brew instal universal-ctags --HEAD
+brew install python3
+brew install vim --with-lua --with-python3
+curl vimfiles.luan.sh/install | FORCE=1 bash
+vim-update
+vim-update
 
 ## Cleanup
 brew cleanup && brew cask cleanup
