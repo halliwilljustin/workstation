@@ -13,13 +13,16 @@
 set -e
 
 ## INSTALL BREW
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/\
+install/master/install)"
 brew update
-brew upgrade
+# brew upgrade
 
 ## Cask
-brew upgrade brew-cask
-brew cask install iterm2 google-chrome firefox
+# brew upgrade brew-cask
+brew cask install iterm2 google-chrome firefox flycut shiftit soundflower\
+ soundflowerbed linein coconutbattery keeweb spotify the-unarchiver\
+ visual-studio-code wine-devel xquartz inkscape gimp flux
 
 ## BASH
 # update Preferences to include `Command: /usr/local/bin/bash --login`
@@ -32,8 +35,8 @@ EOF
 brew instal git
 echo $HOME/.gitconfig << EOF
   [user]
-    email = corbin.halliwill@gmail.com
-    name = Corbin Halliwill
+    email = justin.halliwill@gmail.com
+    name = Justin Halliwill
   [alias]
     st = status
     co = checkout
@@ -85,4 +88,5 @@ vim-update
 vim-update
 
 ## Cleanup
+brew upgrade && brew cask upgrade
 brew cleanup && brew cask cleanup
