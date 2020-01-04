@@ -4,12 +4,6 @@
 # TODO run bash-it update on startup
 # TODO run brew update && brew upgrade on startup
 # TODO check for errors and print error messages
-# TODO look into installing the following
-#   - shiftit
-#   - flycut
-#   - soundflower
-#   - LineIn
-#   - ...
 set -e
 
 ## INSTALL BREW
@@ -26,10 +20,13 @@ brew cask install iterm2 google-chrome firefox flycut shiftit soundflower\
 
 ## BASH
 # update Preferences to include `Command: /usr/local/bin/bash --login`
-brew install bash
-echo $HOME/.bashrc << EOF
-  export EDITOR=vim
-EOF
+# brew install bash
+# echo $HOME/.bashrc << EOF
+#  export EDITOR=vim
+# EOF
+
+## FISH
+brew install fish
 
 ## GIT
 brew instal git
@@ -55,17 +52,17 @@ brew install z
 echo '. `brew --prefix`/etc/profile.d/z.sh' >> ~/.bashrc
 
 ## BASHIT (install and move autocomplete files)
-git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
-yes | $HOME/.bash_it/install.sh
+# git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
+# yes | $HOME/.bash_it/install.sh
 
-echo $HOME/.bash_profile << EOF
+# echo $HOME/.bash_profile << EOF
 # Source .bashrc and .bash_profile
-if [ -f $HOME/.bashrc ]; then
-  source $HOME/.bashrc
-fi
-EOF
+# if [ -f $HOME/.bashrc ]; then
+#  source $HOME/.bashrc
+# fi
+# EOF
 
-bash-it enable completion git brew
+# bash-it enable completion git brew
 
 ## GO
 brew install go
