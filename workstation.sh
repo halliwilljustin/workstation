@@ -16,7 +16,17 @@ brew update
 # brew upgrade brew-cask
 brew cask install iterm2 google-chrome firefox flycut shiftit soundflower\
  soundflowerbed linein coconutbattery keeweb spotify the-unarchiver\
- visual-studio-code wine-devel xquartz inkscape gimp flux
+ visual-studio-code wine-devel xquartz inkscape gimp flux dropbox sketch\
+ google-drive-file-stream
+ # sococo for Admins
+ # applepi-baker arduino atom lmms macvim mixxx textmate tunnelblick
+
+## Non-homebrew installs
+# adobe cc (muse, illustrator, photoshop, xd)
+
+## Browser add-ons
+# ghostery lastpass okta
+# ansel for Admins
 
 ## BASH
 # update Preferences to include `Command: /usr/local/bin/bash --login`
@@ -50,6 +60,14 @@ brew install tree
 brew install htop
 brew install z
 echo '. `brew --prefix`/etc/profile.d/z.sh' >> ~/.bashrc
+
+### other other tools
+# c-ares chruby elixir erlang exiftool glib gmp gnutls htop-osx httrack
+# icu4c intltool jansson jemalloc jpeg libev libevent libffi libgcrypt
+# libgpg-error libidn2 libmaxminddb libpng libsmi libssh libtasn1 libtiff
+# libunistring libyaml lua@5.1 nettle nghttp2 nmap node openssl openssl@1.1
+# p11-kit pidof postgresql ruby ruby-install socat unbound wireshark wxmac
+# zlib
 
 ## BASHIT (install and move autocomplete files)
 # git clone --depth=1 https://github.com/Bash-it/bash-it.git $HOME/.bash_it
@@ -87,3 +105,12 @@ vim-update
 ## Cleanup
 brew upgrade && brew cask upgrade
 brew cleanup && brew cask cleanup
+
+## Config reminders
+# make chrome open incognito w/ applescript app
+# config firefox w/ profile sync
+# keyboard shortcuts for pdf + open in preview
+# custom text replacement for ¯\_(ツ)_/¯
+# hot-corner screenlock
+# custom screensaver?
+# vpn config
