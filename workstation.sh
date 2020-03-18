@@ -15,7 +15,7 @@ brew update
 ## Cask
 # brew upgrade brew-cask
 brew cask install iterm2 google-chrome firefox flycut shiftit soundflower\
- soundflowerbed linein coconutbattery keeweb spotify the-unarchiver\
+ soundflowerbed audio-hijack coconutbattery keeweb spotify the-unarchiver\
  visual-studio-code wine-devel xquartz inkscape gimp flux dropbox sketch\
  google-drive-file-stream
  # sococo for Admins
